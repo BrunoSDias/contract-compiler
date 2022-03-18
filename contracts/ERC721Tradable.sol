@@ -12,10 +12,6 @@ contract ERC721Tradable is Ownable, ERC721URIStorage {
 
   constructor() ERC721("MPTradable", "Trl") {
   }
-
-  function returnStaticData() public view returns(string memory) {
-    return staticData;
-  }
   
   function mint(address _to, string memory tokenURI) external onlyOwner returns(uint256) {
     _tokenIdTracker.increment();
